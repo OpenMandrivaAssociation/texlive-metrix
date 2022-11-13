@@ -1,19 +1,13 @@
-# revision 31425
-# category Package
-# catalog-ctan /macros/latex/contrib/metrix
-# catalog-date 2013-08-13 17:10:37 +0200
-# catalog-license lppl1.3
-# catalog-version 1.0
 Name:		texlive-metrix
-Version:	1.3
-Release:	2
+Version:	52323
+Release:	1
 Summary:	Typeset metric marks for Latin text
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/metrix
 License:	LPPL1.3
-Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metrix.tar.xz
-Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metrix.doc.tar.xz
-Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metrix.source.tar.xz
+Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metrix.r%{version}.tar.xz
+Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metrix.doc.r%{version}.tar.xz
+Source2:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metrix.source.r%{version}.tar.xz
 BuildArch:	noarch
 BuildRequires:	texlive-tlpkg
 Requires(pre):	texlive-tlpkg
@@ -28,12 +22,12 @@ calc library, and the xparse package (thus also requiring the
 experimental LaTeX 3 environment).
 
 %post
-    %{_sbindir}/texlive.post
+%{_sbindir}/texlive.post
 
 %postun
-    if [ $1 -eq 0 ]; then
+if [ $1 -eq 0 ]; then
 	%{_sbindir}/texlive.post
-    fi
+fi
 
 #-----------------------------------------------------------------------
 %files
@@ -46,7 +40,8 @@ experimental LaTeX 3 environment).
 
 #-----------------------------------------------------------------------
 %prep
-%setup -c -a0 -a1 -a2
+%setup -c -a1 -a2
+%autopatch -p1
 
 %build
 
