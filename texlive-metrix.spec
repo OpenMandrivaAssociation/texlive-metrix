@@ -1,6 +1,6 @@
 Name:		texlive-metrix
 Version:	52323
-Release:	1
+Release:	2
 Summary:	Typeset metric marks for Latin text
 Group:		Publishing
 URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/metrix
