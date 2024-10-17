@@ -3,7 +3,7 @@ Version:	52323
 Release:	2
 Summary:	Typeset metric marks for Latin text
 Group:		Publishing
-URL:		http://www.ctan.org/tex-archive/macros/latex/contrib/metrix
+URL:		https://www.ctan.org/tex-archive/macros/latex/contrib/metrix
 License:	LPPL1.3
 Source0:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metrix.r%{version}.tar.xz
 Source1:	http://mirrors.ctan.org/systems/texlive/tlnet/archive/metrix.doc.r%{version}.tar.xz
